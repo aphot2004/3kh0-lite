@@ -23,17 +23,17 @@ If an error must occur, please try again.
 	    iframe.allow = "fullscreen";
 	    iframe.referrerpolicy = "no-referrer";
             iframe.src = url;
+	var link = win.document.querySelector("link[rel~='icon']");
+if (!link) {
+    link = win.document.createElement('link');
+    win.link.rel = 'icon';
+    win.document.head.appendChild(link);
+}
+win.link.href = 'https://stackoverflow.com/favicon.ico';
+
+
             win.document.body.appendChild(iframe);
 	    win.document.title = "Home";
-		var link = document.querySelector("link[rel~='icon']");
-if (!link) {
-    link = document.createElement('link');
-    link.rel = 'icon';
-    document.head.appendChild(link);
-}
-link.href = 'https://stackoverflow.com/favicon.ico';
-
-
         }
         
 </script>
